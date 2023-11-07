@@ -10,8 +10,8 @@ export const Card = styled.div`
     align-items: center;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #2596be;
-    background-color: #2596be;
+    border: 1px solid #EDC7B7;
+    background-color: #EDC7B7;
 `;
 
 export const Title = styled.h2`
@@ -33,6 +33,8 @@ export const Btn = styled.button`
     border-radius: 10px;
     padding: 12px 42px;
     cursor: pointer;
+    color: #2C3531;
+    text-transform: capitalize;
     &[value=good] {
         background-color: #8dd27f;
         border: 1px solid #8dd27f;
@@ -69,13 +71,38 @@ export const StatContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 500px;
-    padding-left 22px;
+    padding-left: 22px;
+    padding-right: 22px;
     padding-bottom: 24px;
 `;
 
-export const StatItem = styled.span`
+export const StatItem = styled.div`
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
+    font-weight: 500;
+    color: #272727;
     text-transform: capitalize;
-    padding-top: 10px;
+    padding-top: 10px;  
+    display: flex;
+    justify-content: space-between;
+`;
+
+export const Key = styled.span`
+    display: flex;
+    align-items: flex-start;
+    padding-right: 10px;
+`; 
+
+export const Dots = styled.span`
+    font-size: 24px;
+    display: flex;
+    flex-grow: 1;
+    border-bottom: 1px dotted #272727;
+    justify-content: baseline;
+`;
+
+export const Amount = styled.span`
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
 `;

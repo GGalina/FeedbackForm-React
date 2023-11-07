@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import { StatContainer, StatItem } from './Feedback.styled';
+import { StatContainer, StatItem, Key, Dots, Amount} from './Feedback.styled';
 
 export const Statistics = ({ stats, total, positiveFeedback }) => {
     return (
@@ -7,12 +7,12 @@ export const Statistics = ({ stats, total, positiveFeedback }) => {
             {Object.entries(stats).map(([key, value]) => {
                 return (
                     <StatItem key={nanoid()}>
-                        {key}: {value}
+                        <Key>{key}:</Key><Dots/><Amount>{value}</Amount>
                     </StatItem>
                 )
             })}
-            <StatItem>Total: {total}</StatItem>
-            <StatItem>Positive feedback: {positiveFeedback} %</StatItem>
+            <StatItem><Key>Total:</Key><Dots/><Amount>{total}</Amount></StatItem>
+            <StatItem><Key>Positive feedback:</Key><Dots/><Amount>{positiveFeedback} %</Amount></StatItem>
         </StatContainer>
     );
 };
